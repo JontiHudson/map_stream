@@ -8,4 +8,6 @@ environment:
 dev_dependencies:
   pedantic: ^1.10.0
 
+documentation: https://jontihudson.github.io/map_stream/
+
 repository: https://github.com/JontiHudson/map_stream
