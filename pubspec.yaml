@@ -1,6 +1,6 @@
 name: map_stream
 description: An implementation of the Dart Map object, adding functionality to listen to streams of entry changes.
-version: 1.0.0-alpha.3
+version: 1.0.0-alpha.4
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
