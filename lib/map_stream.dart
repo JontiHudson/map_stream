@@ -11,8 +11,8 @@
 ///
 /// All **Map** methods work as per [dart:core] **Map** documentation.
 ///
-/// **TypeSafe** maps can only have one value type for each MapEntry. Once set,
-/// if the value type is changed after its first assignment a
+/// **TypeSafe** maps can only have one value type for each **MapEntry**. Once
+/// set, if the value type is changed after its first assignment a
 /// **MapTypeException** is thrown.
 
 import 'dart:async';
@@ -463,7 +463,7 @@ class MapUpdate<K, V> {
   }
 }
 
-/// Thrown by type safe **MapStream**'s are updated with entry value types that
+/// Thrown when type safe **MapStream**s are updated with entry value types that
 /// conflict with exisiting type.
 class MapTypeException implements Exception {
   late final String message;
