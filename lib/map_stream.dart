@@ -123,7 +123,7 @@ class MapStream<K, V> implements Map<K, V?> {
     final updatedMap = _createUpdatedMap(other);
 
     if (updatedMap.isNotEmpty) {
-      final prevMap = _map;
+      final prevMap = {..._map};
       _map.addAll(updatedMap);
 
       _send(updatedMap, _map, prevMap);
@@ -456,7 +456,11 @@ class MapUpdate<K, V> {
   MapUpdate(this.updatedMap, this.currentMap, this.prevMap);
 
   @override
-  String toString() => updatedMap.toString();
+  String toString() {
+    return '\nupdate: ${updatedMap.toString()}'
+        '\nnew: ${currentMap.toString()}'
+        '\nprev: ${prevMap.toString()}';
+  }
 }
 
 /// Thrown by type safe **MapStream**'s are updated with entry value types that
